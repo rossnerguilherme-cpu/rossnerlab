@@ -1,0 +1,78 @@
+:root{color-scheme:dark;--bg:#000;--ink:#e6e6e6;--muted:#999;--line:#191919;--gutter:clamp(16px,1.5vw,32px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:32px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer}
+a,button,summary{-webkit-tap-highlight-color:transparent}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid currentColor;outline-offset:6px}
+::selection{background:#e6e6e6;color:#000}
+.skip-link{position:fixed;top:12px;left:12px;z-index:20;padding:12px;background:var(--ink);color:#000;transform:translateY(-160%)}
+.skip-link:focus{transform:translateY(0)}
+.header{position:relative;display:flex;justify-content:space-between;align-items:flex-start;padding:20px var(--gutter);font-size:14px;line-height:1.25}
+.brand{letter-spacing:-.03em}
+.asterisk{position:absolute;left:50%;transform:translateX(-50%);font-size:28px;line-height:1}
+.header nav{display:flex;flex-direction:column;text-align:right;gap:2px}
+.header nav a:hover,footer a:hover{color:var(--muted)}
+.hero{min-height:calc(100svh - 98px);max-height:1000px;display:flex;flex-direction:column;padding:0 var(--gutter) 24px}
+.hero h1{font-size:18.5vw;line-height:1.04;letter-spacing:-.085em;font-weight:400;margin:12px 0 22px;white-space:nowrap;align-self:center}
+.registered{display:inline-block;font-size:.67em;letter-spacing:-.1em;vertical-align:top;line-height:1.23;margin-left:.035em}
+.hero-description{font-size:clamp(18px,2.35vw,34px);line-height:1.25;letter-spacing:-.025em;text-align:center;margin:0 auto;max-width:760px}
+.text-link{font-size:clamp(16px,1.4vw,22px);display:inline-block;transition:opacity .2s}
+.text-link:hover{opacity:.65}
+.hero-link{margin-top:auto;align-self:flex-end;padding-top:64px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:clamp(110px,15vw,220px) var(--gutter) clamp(100px,13vw,190px)}
+.about-intro{max-width:360px;padding-right:36px;color:var(--muted);font-size:clamp(14px,1.2vw,18px);line-height:1.4;margin:0}
+.philosophy{margin:0;max-width:690px;font-size:clamp(20px,2.4vw,36px);line-height:1.25;letter-spacing:-.02em}
+h2{font-weight:400;letter-spacing:-.05em}
+.services h2{margin:0 0 58px 50%;font-size:clamp(40px,6.2vw,88px);line-height:1}
+.services-list{list-style:none;margin:0;padding:0}
+.services-list li{border-top:1px solid #111}
+.services-list li:last-child{border-bottom:1px solid #111}
+.services-list a{display:grid;grid-template-columns:1fr 1fr 30px;align-items:center;padding:clamp(28px,4vw,58px) var(--gutter);transition:background .2s}
+.services-list a:hover{background:#111}
+.service-number{font-size:14px;color:var(--muted)}
+.services-list a>span:nth-child(2){font-size:clamp(26px,3.6vw,50px);line-height:1.15;letter-spacing:-.035em}
+.arrow{text-align:right;color:var(--muted);transition:transform .2s}
+.services-list a:hover .arrow{transform:translateX(4px);color:var(--ink)}
+.all-projects{text-align:right;padding:38px var(--gutter) 90px}
+.experience{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin:0 var(--gutter)}
+.stat{aspect-ratio:1.07;position:relative;display:flex;align-items:flex-end;justify-content:flex-end;padding:clamp(26px,5vw,76px);background:#080808}
+.stat-highlight{background:#191919}
+.stat-light{background:#e6e6e6;color:#000}
+.stat-link{position:absolute;top:20px;left:20px;font-size:14px}
+.stat-link:hover{text-decoration:underline;text-underline-offset:4px}
+.stat-content{text-align:right}
+.stat-number{font-size:clamp(70px,10.4vw,156px);font-weight:400;line-height:1;letter-spacing:-.065em;margin:0 0 24px}
+.stat-description{font-size:clamp(14px,1.5vw,22px);line-height:1.3;letter-spacing:-.01em;margin:0}
+.faq{display:grid;grid-template-columns:1fr 2fr;gap:20px;padding:clamp(100px,14vw,220px) var(--gutter) clamp(100px,10vw,160px)}
+.faq h2{font-size:clamp(60px,6.5vw,100px);line-height:.9;margin:0}
+.faq details{padding-bottom:clamp(32px,4.2vw,64px)}
+.faq summary{position:relative;padding-right:54px;list-style:none;cursor:pointer;font-size:clamp(20px,2.15vw,32px);line-height:1.25;letter-spacing:-.015em}
+.faq summary::-webkit-details-marker{display:none}
+.faq details[open] summary{color:var(--muted)}
+.faq p{max-width:680px;width:75%;font-size:clamp(18px,1.83vw,28px);line-height:1.3;margin:16px 0 0}
+.toggle{position:absolute;right:10px;top:.3em;width:18px;height:18px}
+.toggle:before,.toggle:after{content:"";position:absolute;background:currentColor}
+.toggle:before{left:0;right:0;top:8px;height:1px}
+.toggle:after{top:0;bottom:0;left:8px;width:1px;transition:transform .2s}
+details[open] .toggle:after{transform:rotate(90deg)}
+footer{border-top:1px solid var(--line);padding:24px var(--gutter);display:flex;justify-content:space-between;gap:20px;font-size:14px}
+dialog{background:#111;color:var(--ink);border:1px solid #333;width:min(760px,calc(100% - 32px));padding:clamp(28px,5vw,64px);max-height:85svh}
+dialog::backdrop{background:rgb(0 0 0 / .85);backdrop-filter:blur(8px)}
+dialog h2{font-size:clamp(34px,5vw,64px);margin:40px 0 20px;line-height:1.05}
+dialog p{font-size:18px;line-height:1.4;color:#aaa}
+dialog .dialog-eyebrow{font-size:14px;padding-right:32px}
+.close-dialog{position:absolute;top:14px;right:18px;background:none;border:0;font-size:32px;width:44px;height:44px}
+.back-button{padding:14px 0;background:none;border:0;border-bottom:1px solid #888;margin-top:32px;font-size:16px}
+body:has(dialog[open]){overflow:hidden}
+@media(min-width:1600px){main,.header,footer{max-width:1920px;margin-left:auto;margin-right:auto}.hero h1{font-size:min(18.5vw,355px)}}
+@media(max-width:700px){
+ .header{padding-top:18px}.hero{min-height:72svh;max-height:none;padding-top:28px}.hero h1{font-size:18vw;margin-bottom:24px}.hero-description{max-width:360px;font-size:18px}.hero-link{padding-top:80px}
+ .about{grid-template-columns:1fr;gap:48px;padding-top:100px;padding-bottom:90px}.about-intro{max-width:310px;padding:0}.philosophy{max-width:490px;font-size:25px}
+ .services h2{margin-left:var(--gutter);margin-bottom:34px}.services-list a{grid-template-columns:50px 1fr 20px;padding-block:28px}.services-list a>span:nth-child(2){font-size:28px}.all-projects{padding-top:28px;padding-bottom:70px}
+ .stat{min-height:260px;aspect-ratio:auto;padding:52px 20px 26px}.stat-number{font-size:64px;margin-bottom:18px}.stat-description{font-size:14px}.stat-link{top:14px;left:14px}.desktop-break{display:none}
+ .faq{grid-template-columns:1fr;padding-top:100px;gap:50px}.faq h2{font-size:64px}.faq summary{font-size:21px;padding-right:34px}.faq p{font-size:18px;width:100%;padding-right:22px}.faq details{padding-bottom:34px}.toggle{right:2px}
+}
+@media(max-width:380px){.experience{grid-template-columns:1fr}.stat{min-height:300px}.stat-number{font-size:84px}.stat-description{font-size:16px}.hero-description{font-size:17px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}

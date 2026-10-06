@@ -1,0 +1,22 @@
+ROSSNER.LAB® — PORTFÓLIO
+
+NO COMPUTADOR
+1. Extraia o arquivo ZIP inteiro.
+2. Abra a pasta Rossner.lab.
+3. Dê dois cliques em index.html para abrir no navegador.
+Mantenha todas as pastas juntas. Não é preciso instalar nada ou ter internet.
+Fotografias, galerias e nove vídeos estão incluídos. Links externos precisam de internet.
+
+NO CELULAR E PARA COMPARTILHAR
+Use o link: https://rossner-lab.mktmestredofrango.chatgpt.site
+O layout se adapta à tela. O cliente pode abrir e rever pelo navegador, sem login.
+O pacote ZIP é destinado ao computador: celulares podem limitar a abertura de sites locais.
+
+NOVIDADES DESTA VERSÃO
+12 clientes, incluindo Mestre do Frango e Haus (sem o segundo slide da apresentação).
+Prévia lateral dos projetos a cada 3 segundos, com pausa e setas.
+Entradas suaves e contagem animada dos números de experiência.
+No celular, também é possível deslizar a prévia para os lados.
+Se o sistema estiver configurado para reduzir movimento, as animações são desativadas.
+
+Os dados de contato ainda aguardam preenchimento.

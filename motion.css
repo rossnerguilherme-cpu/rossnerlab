@@ -1,0 +1,40 @@
+/* Movimento discreto, com rolagem nativa e preferência de acessibilidade. */
+.hero{min-height:0;max-height:none;padding-bottom:18px}
+.hero-link{margin-top:clamp(46px,6vw,100px);padding-top:0}
+.project-preview{--visible:3;position:relative;padding-top:8px}
+.preview-toolbar{display:flex;justify-content:space-between;align-items:center;padding:0 var(--gutter) 12px;gap:20px;color:#aaa;font-size:12px;font-variant-numeric:tabular-nums}
+.preview-controls{display:flex;gap:4px}
+.preview-controls button{background:transparent;border:0;padding:8px;min-width:44px;min-height:44px;font-size:20px;line-height:1;transition:color .2s}
+.preview-controls button:hover{color:#fff}
+.preview-viewport{overflow-x:auto;scrollbar-width:thin;touch-action:pan-y}
+.preview-track{display:flex;align-items:stretch}
+.preview-track>.project-card{flex:0 0 calc(100% / var(--visible));aspect-ratio:4/5;border-right:2px solid #000}
+.preview-track .card-caption{font-size:clamp(17px,1.4vw,23px);bottom:20px}
+.preview-track .card-year{display:none}
+.preview-ready .preview-viewport{overflow:hidden}
+.preview-ready .preview-track{transition:transform .85s cubic-bezier(.22,.68,.22,1);will-change:transform}
+.preview-track.no-transition{transition:none}
+.about{padding-top:clamp(85px,11vw,170px)}
+.motion-ready .reveal{opacity:0;transform:translate3d(0,24px,0);transition:opacity .85s ease,transform .85s cubic-bezier(.2,.65,.25,1)}
+.motion-ready .reveal.is-visible{opacity:1;transform:none}
+.motion-ready .hero h1,.motion-ready .projects-intro h1,.motion-ready .case-hero-title{animation:arrival 1s cubic-bezier(.2,.65,.25,1) both}
+.motion-ready .hero-description,.motion-ready .projects-intro p{animation:arrival 1s .12s cubic-bezier(.2,.65,.25,1) both}
+.motion-ready .case-cover{transform:translate3d(0,var(--cover-offset,0px),0) scale(1.045)}
+.stat-number{font-variant-numeric:tabular-nums}
+.faq details[open] p{animation:arrival .4s ease both}
+.next-title,.projects-back{transition:color .25s,background .25s,opacity .25s}
+.next-title:hover{opacity:.65}
+@keyframes arrival{from{opacity:0;transform:translate3d(0,20px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+@media(max-width:900px){.project-preview{--visible:2}}
+@media(max-width:600px){
+ .hero{min-height:0;padding-top:20px}.hero-link{margin-top:60px;padding-top:0}
+ .project-preview{--visible:1}.preview-track>.project-card{aspect-ratio:1}
+ .preview-track .card-caption{font-size:22px}.preview-toolbar{padding-bottom:6px}
+ .about{padding-top:80px}.header nav a{padding-block:3px}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*:before,*:after{animation:none!important;transition:none!important}
+ .motion-ready .reveal{opacity:1;transform:none}
+ .motion-ready .case-cover{transform:none}
+}
